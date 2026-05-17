@@ -25,4 +25,7 @@ fi
 # container), so removing the file unconditionally is safe.
 rm -f /data/.hermes/gateway.pid
 
+# Start Syncthing in background
+syncthing --no-browser --home=/data/.config/syncthing &
+
 exec python /app/server.py
